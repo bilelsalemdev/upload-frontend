@@ -17,7 +17,7 @@ export default function SignUp() {
   }
   return (
     <form className="signup-form">
-      <div className="signup-form__logo">
+      <div className="signup-form__login">
         <img src="IconOstedhy.svg" alt="logo" />
       </div>
       <div className="signup-form__title">sign up</div>

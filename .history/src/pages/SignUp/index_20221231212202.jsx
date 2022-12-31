@@ -8,7 +8,7 @@ export default function SignUp() {
   useEffect(() => {
     dispatch(register());
   }, [dispatch]);
-  if (loading) {
+    if (loading) {
     return (
       <div className="loading">
         <h1>Loading ...</h1>

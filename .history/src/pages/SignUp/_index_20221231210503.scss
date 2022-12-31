@@ -1,5 +1,4 @@
-
-
+@import '../../assets/mixins/mixins';
 .signup-form {
   max-width: 40vw;
   width: 100%;
@@ -8,21 +7,13 @@
   margin: 5rem auto 0 auto;
   border-radius: 1rem;
   padding: 3rem 5rem;
- 
-  &__logo {
+  @include small-desktop {
+      font-size: 62.5%;
+    }
+  &__login {
     text-align: center;
     margin-bottom: 1rem;
-    @media screen and (max-width: 1400px) {
-    
-        width: 100%;
-        img{
-            width: 50px;
-        }
-      
-    }
-      
-    }
-  
+  }
   &__title {
     font-size: 1.4rem;
     font-weight: 600;
@@ -33,7 +24,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 1.5rem;
-    justify-content: center;
     &--item {
       display: flex;
       flex-direction: column;

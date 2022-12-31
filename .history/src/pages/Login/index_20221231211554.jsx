@@ -1,20 +1,6 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { register } from "../../features/userRegistration/userRegisrationSlice";
-export default function SignUp() {
-  const { loading } = useSelector((store) => store.userRegistration);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(register());
-  }, [dispatch]);
-  if (loading) {
-    return (
-      <div className="loading">
-        <h1>Loading ...</h1>
-      </div>
-    );
-  }
+import React from "react";
+
+export default function Login() {
   return (
     <form className="signup-form">
       <div className="signup-form__logo">
@@ -73,4 +59,6 @@ export default function SignUp() {
       </section>
     </form>
   );
+}
+
 }

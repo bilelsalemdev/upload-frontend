@@ -1,13 +1,11 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 import { Link } from "react-router-dom";
-import { authenticate } from "../../features/userAuthentication/userAuthenticationSlice";
 
 export default function Login() {
-  const { loading } = useSelector((store) => store.userAuthentication);
+  const { loading } = useSelector((store) => store.userRegistration);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(authenticate());
+    dispatch(register());
   }, [dispatch]);
   if (loading) {
     return (
