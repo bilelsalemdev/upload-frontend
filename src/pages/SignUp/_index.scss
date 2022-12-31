@@ -5,7 +5,7 @@
   background-color: white;
   margin: 5rem auto 0 auto;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 3rem 5rem;
   &__login {
     text-align: center;
     margin-bottom: 1rem;
@@ -54,6 +54,19 @@
         font-size: 1rem;
         color: white;
         text-transform: capitalize;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+          background-color: #2ba8be;
+        }
+      }
+      p {
+        margin-top: 0.5rem;
+        text-align: center;
+        a {
+          color: #3c6fe1;
+          text-decoration: none;
+        }
       }
     }
   }

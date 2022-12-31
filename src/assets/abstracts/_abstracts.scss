@@ -1,3 +1,12 @@
 .red {
   color: red;
 }
+.loading {
+  text-align: center;
+  font-size: 5rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

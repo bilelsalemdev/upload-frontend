@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { register } from "../../features/userRegistration/userRegisrationSlice";
 export default function SignUp() {
+  const { loading } = useSelector((store) => store.userRegistration);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(register());
+  }, []);
+  if (loading) {
+    return (
+      <div className="loading">
+        <h1>Loading ...</h1>
+      </div>
+    );
+  }
   return (
     <form className="signup-form">
       <div className="signup-form__login">
@@ -47,7 +61,13 @@ export default function SignUp() {
         <div className="signup-form__inputs--submission">
           <button className="btn">sign up</button>
           <p>
-            have you an account ? <Link to="/login">Login</Link>
+            have you an account ?
+            <Link to="/login">
+              {" "}
+              <a href="/login" className="signup-form__inputs--submission-link">
+                Login
+              </a>
+            </Link>
           </p>
         </div>
       </section>
