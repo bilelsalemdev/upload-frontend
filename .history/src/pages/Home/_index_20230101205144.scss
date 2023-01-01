@@ -1,0 +1,87 @@
+.home-container {
+    background-color: white;
+    height: 90vh;
+    width: 80vw;
+    margin: 2rem auto -2rem;
+    border-radius: 1rem;
+
+    &--wrapper {
+        display: flex;
+        align-items: center;
+
+        &__logo {
+
+
+            img {
+                width: 40px;
+
+            }
+        }
+
+        .search-input {
+            width: 100%;
+            margin: 0 1rem;
+            padding: 1rem;
+            border: 1px solid rgb(248, 239, 239);
+            background-color: rgb(248, 239, 239);
+            border-radius: 5rem;
+            outline: none;
+            text-indent: 1rem;
+            flex: 1;
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover {
+                border: 1px solid #ccc;
+            }
+        }
+
+        ion-icon {
+            color: gray;
+            font-size: 30px;
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover {
+                color: black;
+            }
+        }
+
+        &__extra-features {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &--settings,
+            &--notifications {
+                margin-right: 1rem;
+                cursor: pointer;
+                font-size: 30px;
+                border: 1px solid #ccc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: .2rem .5rem;
+                border-radius: 1rem;
+                transition: .2s;
+
+                &:hover {
+                    border: 1px solid black;
+                }
+
+                ion-icon {
+                    color: rgb(120, 117, 117);
+                    transition: .2s;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+
+            &--profile {
+                display: flex;
+            }
+        }
+    }
+}

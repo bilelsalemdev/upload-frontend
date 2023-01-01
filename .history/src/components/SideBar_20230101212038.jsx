@@ -1,0 +1,28 @@
+import React from "react";
+import Slice from "./Slice";
+
+export default function SideBar() {
+  return (
+    <aside className="aside-container">
+      <button className="aside-container__btn">
+        <ion-icon name="cloud-upload-outline"></ion-icon>
+        <span>Upload</span>
+      </button>
+      <section className="aside-container__slices">
+        <Slice name="Home" icon={<ion-icon name="home-outline"></ion-icon>} />
+        <Slice
+          name="All Files"
+          icon={<ion-icon name="library-outline"></ion-icon>}
+        />
+        <Slice
+          name="starred"
+          icon={<ion-icon name="star-outline"></ion-icon>}
+        />
+        <Slice
+          name="Archived"
+          icon={<ion-icon name="archive-outline"></ion-icon>}
+        />
+      </section>
+    </aside>
+  );
+}

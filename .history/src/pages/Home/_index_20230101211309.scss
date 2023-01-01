@@ -1,0 +1,142 @@
+@import '../../assets/variables/variables';
+
+.home-container {
+    background-color: white;
+    height: 90vh;
+    width: 80vw;
+    margin: 2rem auto -2rem;
+    border-radius: 1rem;
+
+    &--wrapper {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+
+        &__logo {
+            cursor: pointer;
+
+            img {
+                width: 40px;
+
+            }
+        }
+
+        .search-container {
+            position: relative;
+            width: 100%;
+            flex: 1;
+            margin: 0 1rem;
+
+            .search-input {
+                width: 100%;
+                margin: 0 1rem;
+                padding: 1rem;
+                border: 1px solid $secondary-background;
+                background-color: $secondary-background;
+                border-radius: 5rem;
+                outline: none;
+                text-indent: 1rem;
+
+                cursor: pointer;
+                transition: .2s;
+
+                &:hover {
+                    border: 1px solid #ccc;
+                }
+            }
+
+            ion-icon {
+                color: gray;
+                font-size: 30px;
+                cursor: pointer;
+                transition: .2s;
+                position: absolute;
+                top: 3px;
+                right: 0;
+
+                &:hover {
+                    color: black;
+                }
+            }
+
+        }
+
+
+        &__extra-features {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &--settings,
+            &--notifications {
+                margin-right: 1rem;
+                cursor: pointer;
+                font-size: 25px;
+                border: 1px solid #ccc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: .2rem .5rem;
+                border-radius: 1rem;
+                transition: .2s;
+                margin: 0 1rem;
+
+                span {
+                    font-size: 15px;
+                }
+
+                &:hover {
+                    border: 1px solid black;
+
+                    ion-icon {
+                        color: black;
+                    }
+
+                    span {
+                        color: black;
+                    }
+                }
+
+                ion-icon {
+                    color: rgb(120, 117, 117);
+                    transition: .2s;
+
+
+
+
+                }
+
+                span {
+                    color: rgb(120, 117, 117);
+                }
+            }
+
+            &--settings {
+                padding: .4rem .7rem;
+            }
+
+            &--profile {
+                display: flex;
+                align-items: center;
+
+                p {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    font-family: sans-serif;
+                }
+
+                &__avatar {
+                    margin: 0 1rem;
+
+                    cursor: pointer;
+
+                    img {
+                        width: 40px;
+                        border-radius: 50%;
+                    }
+
+                }
+            }
+        }
+    }
+}

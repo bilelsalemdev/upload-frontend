@@ -1,0 +1,25 @@
+.home-container {
+    background-color: white;
+    height: 90vh;
+    width: 80vw;
+    margin: 2rem auto -2rem;
+    border-radius: 1rem;
+
+    &--wrapper {
+        display: flex;
+        align-items: center;
+
+        &__logo {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &--img {
+                width: 50%;
+                height: 50%;
+            }
+        }
+    }
+}
