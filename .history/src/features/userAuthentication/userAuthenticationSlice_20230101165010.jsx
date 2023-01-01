@@ -54,5 +54,5 @@ const userAuthenticationSlice = createSlice({
     });
   },
 });
-export const { setEmail, setPassword } = userAuthenticationSlice.actions;
+
 export default userAuthenticationSlice.reducer;

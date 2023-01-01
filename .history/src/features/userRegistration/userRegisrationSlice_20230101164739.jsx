@@ -10,7 +10,7 @@ export const register = createAsyncThunk(
         body: JSON.stringify({
           username: `${state.firstName} ${state.lastName}`,
           email: `${state.email}`,
-          password: `${state.password}`,
+          password: "password",
         }),
         headers: {
           "Content-Type": "application/json",

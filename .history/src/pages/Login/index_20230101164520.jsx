@@ -5,7 +5,7 @@ import { authenticate } from "../../features/userAuthentication/userAuthenticati
 import {
   setEmail,
   setPassword,
-} from "../../features/userAuthentication/userAuthenticationSlice";
+} from "../../features/userRegistration/userRegisrationSlice";
 
 export default function Login() {
   const { loading, email, password } = useSelector(

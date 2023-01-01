@@ -3,14 +3,14 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 const url = `${process.env.REACT_APP_STRAPI_API_BASE_URL}/api/auth/local/register`;
 export const register = createAsyncThunk(
   "userRegistration/register",
-  async (state, thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
       const resp = await fetch(url, {
         method: "POST",
         body: JSON.stringify({
-          username: `${state.firstName} ${state.lastName}`,
-          email: `${state.email}`,
-          password: `${state.password}`,
+          username: `bil2 salem${new Date().getTime()}`,
+          email: `bilel${new Date().getTime()}.salem@polytechnicien.tn`,
+          password: "password",
         }),
         headers: {
           "Content-Type": "application/json",

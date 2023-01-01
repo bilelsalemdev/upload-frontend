@@ -9,8 +9,8 @@ export const register = createAsyncThunk(
         method: "POST",
         body: JSON.stringify({
           username: `${state.firstName} ${state.lastName}`,
-          email: `${state.email}`,
-          password: `${state.password}`,
+          email: `bilel${new Date().getTime()}.salem@polytechnicien.tn`,
+          password: "password",
         }),
         headers: {
           "Content-Type": "application/json",

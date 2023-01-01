@@ -3,13 +3,13 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 const url = "http://localhost:1337/api/auth/local";
 export const authenticate = createAsyncThunk(
   "userAuthentication/authenticate",
-  async (state, thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
       const resp = await fetch(url, {
         method: "POST",
         body: JSON.stringify({
-          email: `${state.email}`,
-          password: `${state.password}`,
+          email: `bilel${new Date().getTime()}.salem@polytechnicien.tn`,
+          password: "password",
         }),
         headers: {
           "Content-Type": "application/json",
@@ -25,34 +25,26 @@ export const authenticate = createAsyncThunk(
 );
 const initialState = {
   loading: true,
-  authenticated: false,
-  email: null,
-  password: null,
+  authenticated:false,
+  e
 };
 const userAuthenticationSlice = createSlice({
   name: "userAuthentication",
   initialState,
-  reducers: {
-    setEmail: (state, action) => {
-      state.email = action.payload;
-    },
-    setPassword: (state, action) => {
-      state.password = action.payload;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(authenticate.pending, (state) => {
       state.loading = true;
     });
     builder.addCase(authenticate.fulfilled, (state) => {
       state.loading = false;
-      state.authenticated = true;
+      state.authenticated=true;
     });
     builder.addCase(authenticate.rejected, (state) => {
       state.loading = true;
-      state.authenticated = false;
+      state.authenticated=false;
     });
   },
 });
-export const { setEmail, setPassword } = userAuthenticationSlice.actions;
+
 export default userAuthenticationSlice.reducer;

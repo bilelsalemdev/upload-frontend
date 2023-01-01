@@ -32,14 +32,7 @@ const initialState = {
 const userAuthenticationSlice = createSlice({
   name: "userAuthentication",
   initialState,
-  reducers: {
-    setEmail: (state, action) => {
-      state.email = action.payload;
-    },
-    setPassword: (state, action) => {
-      state.password = action.payload;
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(authenticate.pending, (state) => {
       state.loading = true;
@@ -54,5 +47,5 @@ const userAuthenticationSlice = createSlice({
     });
   },
 });
-export const { setEmail, setPassword } = userAuthenticationSlice.actions;
+
 export default userAuthenticationSlice.reducer;

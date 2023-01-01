@@ -3,12 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import {
   register,
-  setBirth,
-  setEmail,
   setFirstName,
-  setLastName,
-  setPassword,
-  setPhone,
 } from "../../features/userRegistration/userRegisrationSlice";
 export default function SignUp() {
   const { loading, firstName, lastName, email, password, birth, phone } =
@@ -40,62 +35,38 @@ export default function SignUp() {
             type="text"
             placeholder="Enter your First name"
             value={firstName}
-            onChange={(e) => dispatch(setFirstName(e.target.value))}
+            onChange={dispatch(setFirstName(e.target.value))}
           />
         </div>
         <div className="signup-form__inputs--item">
           <label htmlFor="last-name">
             last name <span className="red">*</span>
           </label>
-          <input
-            type="text"
-            placeholder="Enter your Last name"
-            value={lastName}
-            onChange={(e) => dispatch(setLastName(e.target.value))}
-          />
+          <input type="text" placeholder="Enter your Last name" />
         </div>
         <div className="signup-form__inputs--item">
           <label htmlFor="email">
             email <span className="red">*</span>
           </label>
-          <input
-            type="text"
-            placeholder="Enter your email address"
-            value={email}
-            onChange={(e) => dispatch(setEmail(e.target.value))}
-          />
+          <input type="text" placeholder="Enter your email address" />
         </div>
         <div className="signup-form__inputs--item">
           <label htmlFor="password">
             password <span className="red">*</span>
           </label>
-          <input
-            type="password"
-            placeholder="Enter your Password"
-            value={password}
-            onChange={(e) => dispatch(setPassword(e.target.value))}
-          />
+          <input type="password" placeholder="Enter your Password" />
         </div>
         <div className="signup-form__inputs--item">
           <label htmlFor="phone">
             phone number <span className="red">*</span>
           </label>
-          <input
-            type="tel"
-            placeholder="Enter your Phone number"
-            value={phone}
-            onChange={(e) => dispatch(setPhone(e.target.value))}
-          />
+          <input type="tel" placeholder="Enter your Phone number" />
         </div>
         <div className="signup-form__inputs--item">
           <label htmlFor="birth">
             birth date <span className="red">*</span>
           </label>
-          <input
-            type="date"
-            value={birth}
-            onChange={(e) => dispatch(setBirth(e.target.value))}
-          />
+          <input type="date" />
         </div>
         <div className="signup-form__inputs--submission">
           <button className="btn">sign up</button>
